@@ -1,0 +1,27 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "GooglePlayReady",
+	"Description": "Fixes some Android files for release on Google Play.",
+	"Category": "Android",
+	"CreatedBy": "Metaseven",
+	"CreatedByURL": "https://twitter.com/suramaru517",
+	"DocsURL": "https://github.com/suramaru517/GooglePlayReady",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EngineVersion": "",
+	"CanContainContent": false,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "GooglePlayReady",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Android",
+				"Win64"
+			]
+		}
+	]
+}

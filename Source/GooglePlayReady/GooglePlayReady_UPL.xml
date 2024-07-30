@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:android="http://schemas.android.com/apk/res/android">
+	<androidManifestUpdates>
+
+		<removePermission android:name="android.permission.INTERNET" />
+		<removePermission android:name="android.permission.ACCESS_NETWORK_STATE" />
+		<addPermission android:name="android.permission.WAKE_LOCK" />
+		<removePermission android:name="com.android.vending.CHECK_LICENSE" />
+		<removePermission android:name="android.permission.ACCESS_WIFI_STATE" />
+		<removePermission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+		<removePermission android:name="android.permission.VIBRATE" />
+		<removePermission android:name="com.android.vending.BILLING" />
+
+		<loopElements tag="activity">
+			<setStringFromAttribute  result="ExportTag" tag="$" name="android:exported"/>
+			<setBoolIsEqual result="ShouldNotAddExportTag" arg1="$S(ExportTag)" arg2="false"/>
+			<if condition="ShouldNotAddExportTag">
+				<false>
+					<addAttribute tag="$" name="android:exported" value="true"/>
+				</false>
+			</if>
+		</loopElements>
+
+		<loopElements tag="service">
+			<setStringFromAttribute  result="ExportTag" tag="$" name="android:exported"/>
+			<setBoolIsEqual result="ShouldNotAddExportTag" arg1="$S(ExportTag)" arg2="false"/>
+			<if condition="ShouldNotAddExportTag">
+				<false>
+					<addAttribute tag="$" name="android:exported" value="true"/>
+				</false>
+			</if>
+		</loopElements>
+
+		<loopElements tag="receiver">
+			<setStringFromAttribute  result="ExportTag" tag="$" name="android:exported"/>
+			<setBoolIsEqual result="ShouldNotAddExportTag" arg1="$S(ExportTag)" arg2="false"/>
+			<if condition="ShouldNotAddExportTag">
+				<false>
+					<addAttribute tag="$" name="android:exported" value="true"/>
+				</false>
+			</if>
+		</loopElements>
+
+	</androidManifestUpdates>
+</root>

@@ -10,7 +10,7 @@
 	"DocsURL": "https://github.com/suramaru517/GooglePlayReady",
 	"MarketplaceURL": "",
 	"SupportURL": "",
-	"EngineVersion": "",
+	"EngineVersion": "4.27.0",
 	"CanContainContent": false,
 	"Installed": true,
 	"Modules": [
